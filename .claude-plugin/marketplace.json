@@ -1,0 +1,40 @@
+{
+  "name": "myskill",
+  "owner": {
+    "name": "sjlee42",
+    "url": "https://github.com/sjlee42"
+  },
+  "metadata": {
+    "description": "Claude Code skills by sjlee42. Korean-first agent skills for writing and research workflows.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "write-with-me",
+      "description": "Interview-based writing partner for evaluated documents (cover letters, hackathon/contest/internship applications, grant proposals). Researches the program and its judges with subagents, interviews you one question at a time, drafts only from your own words, then runs a blind multi-judge review (Claude, plus optional Codex and Antigravity). Korean-first.",
+      "source": "./",
+      "strict": false,
+      "version": "1.0.0",
+      "author": {
+        "name": "sjlee42"
+      },
+      "homepage": "https://github.com/sjlee42/myskill",
+      "repository": "https://github.com/sjlee42/myskill",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "writing",
+        "cover-letter",
+        "application",
+        "interview",
+        "llm-judge",
+        "korean",
+        "자기소개서",
+        "지원서"
+      ],
+      "skills": [
+        "./skills/write-with-me"
+      ]
+    }
+  ]
+}

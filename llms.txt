@@ -1,0 +1,20 @@
+# myskill
+
+> Claude Code skills (Agent Skills, SKILL.md format) by sjlee42. Korean-first. Installable as a Claude Code plugin marketplace (`/plugin marketplace add sjlee42/myskill`), with the skills CLI (`npx skills add sjlee42/myskill`), or by copying `skills/<name>/` into `~/.claude/skills/`.
+
+Each skill lives at `skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`). Supporting files are in `references/` and `scripts/` in the same folder.
+
+## Skills
+
+- [write-with-me](https://github.com/sjlee42/myskill/blob/main/skills/write-with-me/SKILL.md): Interview-based writing partner for evaluated documents such as cover letters (자기소개서), hackathon, contest, internship and scholarship applications, and grant proposals. It researches the program and its judges with subagents, briefs what each question really asks, interviews the user one question at a time, drafts only from the user's own words, then runs a blind multi-judge review (3 Claude judges, plus optional Codex and Antigravity). Use it when someone else will evaluate the text. Do not use it for blogs or proofreading only.
+
+## Install
+
+- Claude Code plugin: `/plugin marketplace add sjlee42/myskill`, then `/plugin install write-with-me@myskill`
+- skills CLI: `npx skills add sjlee42/myskill --skill write-with-me -a claude-code`
+- Manual: `git clone https://github.com/sjlee42/myskill.git && cp -r myskill/skills/write-with-me ~/.claude/skills/`
+
+## Optional
+
+- [Plugin manifest](https://github.com/sjlee42/myskill/blob/main/.claude-plugin/marketplace.json): machine-readable list of plugins and their skills
+- [write-with-me judge design](https://github.com/sjlee42/myskill/blob/main/skills/write-with-me/references/judges.md): how judge personas are built and how external CLIs are called
