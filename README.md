@@ -84,7 +84,8 @@ skills/write-with-me/
 │   ├── questioning.md          # 질문법: 문항별 인터뷰 흐름, 행동사건면접, Cognitive Interview, Mom Test, 래더링, JTBD, 소크라테스식
 │   └── checklist.md            # 잘 쓴 글 점검 + 한국어 AI 티 점검
 └── scripts/
-    ├── count.py                # 글자 수 (공백 포함/제외, 제한 대비 %)
+    ├── count.py                # 글자 수 (공백 포함/제외, 줄바꿈 포함 옵션, 제한 대비 %)
+    ├── check_facts.py          # 초안의 숫자가 답변·공고에 있는지 대조
     └── run_judge.sh            # 외부 심사위원(codex/agy) 실행기
 ```
 
