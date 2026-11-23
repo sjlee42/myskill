@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: cover-letter-vague
+expected_outcome: |
+  이미 설치된 관련 skill(write-with-me)을 먼저 찾아 알려주고, 한국어 자소서 작성·윤문·면접 준비를 단계별로 나눠 도구를 추천하며, 근거 신호를 함께 보여준다.
