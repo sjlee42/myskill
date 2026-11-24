@@ -2,17 +2,18 @@
 
 > Claude Code skills (Agent Skills, SKILL.md format) by sjlee42. Korean-first. Installable as a Claude Code plugin marketplace (`/plugin marketplace add sjlee42/myskill`), with the skills CLI (`npx skills add sjlee42/myskill`), or by copying `skills/<name>/` into `~/.claude/skills/`.
 
-Each skill lives at `skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`). Supporting files are in `references/` and `scripts/` in the same folder.
+Each skill lives at `skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`). Supporting files are in `references/`, `scripts/` and `evals/` in the same folder. Design notes and test results are in `docs/<name>/`.
 
 ## Skills
 
 - [write-with-me](https://github.com/sjlee42/myskill/blob/main/skills/write-with-me/SKILL.md): Interview-based writing partner for evaluated documents such as cover letters (자기소개서), hackathon, contest, internship and scholarship applications, and grant proposals. It researches the program and its judges with subagents, briefs what each question really asks, interviews the user one question at a time, drafts only from the user's own words, then runs a blind multi-judge review (3 Claude judges, plus optional Codex and Antigravity). Use it when someone else will evaluate the text. Do not use it for blogs or proofreading only.
+- [tool-finder](https://github.com/sjlee42/myskill/blob/main/skills/tool-finder/SKILL.md): Finds existing AI tools (MCP servers, Claude skills, Claude Code plugins, n8n workflows, GitHub agents) by capability rather than keyword. It splits a need into capabilities, searches the official MCP registry, skills.sh, n8n, GitHub and plugin catalogs at once, checks without installing that candidates still exist and are not broken, and proposes combinations that cover every capability, with proof when nothing fits. Requires python3, curl and a logged-in gh.
 
 ## Install
 
-- Claude Code plugin: `/plugin marketplace add sjlee42/myskill`, then `/plugin install write-with-me@myskill`
-- skills CLI: `npx skills add sjlee42/myskill --skill write-with-me -a claude-code`
-- Manual: `git clone https://github.com/sjlee42/myskill.git && cp -r myskill/skills/write-with-me ~/.claude/skills/`
+- Claude Code plugin: `/plugin marketplace add sjlee42/myskill`, then `/plugin install <skill>@myskill` (write-with-me, tool-finder)
+- skills CLI: `npx skills add sjlee42/myskill --skill <skill> -a claude-code`
+- Manual: `git clone https://github.com/sjlee42/myskill.git && cp -r myskill/skills/<skill> ~/.claude/skills/`
 
 ## Optional
 

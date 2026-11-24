@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: ktx-booking-removed
+expected_outcome: |
+  KTX 좌석 예매까지 하는 skill이 현재 실제로 존재하는지 확인하고(디렉터리 목록만 믿지 않음), 없으면 그 사실과 조회용 대안, 자동 예매의 법적·약관 위험을 알려준다.
